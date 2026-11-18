@@ -1,0 +1,9 @@
+{
+  "name": "yerli-ucak-simulasyonu-v2",
+  "version": "2.0.0",
+  "type": "module",
+  "description": "Tamamen telifsiz, yerli ve harici kutuphanesiz 3D ucak simulasyonu",
+  "scripts": {
+    "start": "node sunucu.js"
+  }
+}

@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    overflow: hidden;
+    background-color: #020617;
+    font-family: 'Courier New', monospace;
+}
+
+#oyunEkrani {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
+
+#hud {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    color: #00ff66;
+    text-shadow: 0 0 8px rgba(0, 255, 102, 0.8);
+}
+
+.pusula-kutusu {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #00ff66;
+    background: rgba(0, 25, 10, 0.55);
+    backdrop-filter: blur(4px);
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.gosterge {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid #00ff66;
+    background: rgba(0, 25, 10, 0.45);
+    backdrop-filter: blur(4px);
+    padding: 16px 22px;
+    text-align: center;
+    border-radius: 6px;
+    min-width: 130px;
+}
+
+.sol { left: 45px; }
+.sag { right: 45px; }
+
+.gosterge span {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #86efac;
+}
+
+.gosterge strong {
+    display: block;
+    font-size: 34px;
+}
+
+.gosterge small {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    color: #bbf7d0;
+}
+
+#stallUyari {
+    color: #ff3333;
+    text-shadow: 0 0 10px #ff0000;
+    font-weight: bold;
+    animation: yanSon 0.4s infinite alternate;
+}
+
+.gizli {
+    display: none !important;
+}
+
+@keyframes yanSon {
+    from { opacity: 1; }
+    to { opacity: 0.2; }
+}
+
+.nisangah {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.kanat {
+    width: 32px;
+    height: 3px;
+    background: #00ff66;
+    box-shadow: 0 0 8px #00ff66;
+}
+
+.merkez-nokta {
+    width: 8px;
+    height: 8px;
+    border: 2px solid #00ff66;
+    border-radius: 50%;
+}
+
+.alt-panel {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 20, 10, 0.75);
+    border: 1px solid #00ff66;
+    padding: 10px 24px;
+    border-radius: 20px;
+    display: flex;
+    gap: 22px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.bilgi { color: #aaffcc; }

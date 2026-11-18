@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yerli Uçak Simülasyonu v2.0 - Gerçekçi 3D Kokpit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="oyunEkrani"></canvas>
+
+    <!-- Savaş Uçağı Gelişmiş HUD Göstergeleri -->
+    <div id="hud">
+        <!-- Üst Pusula Bandı -->
+        <div class="pusula-kutusu">
+            <div id="pusulaDegeri">HDG 000°</div>
+        </div>
+
+        <!-- Sol Hız Şeridi -->
+        <div class="gosterge sol">
+            <span>IAS (KTS)</span>
+            <strong id="hizDegeri">280</strong>
+            <small id="stallUyari" class="gizli">STALL!</small>
+        </div>
+
+        <!-- Merkez Nişangah -->
+        <div class="nisangah">
+            <div class="kanat sol-kanat"></div>
+            <div class="merkez-nokta"></div>
+            <div class="kanat sag-kanat"></div>
+        </div>
+
+        <!-- Sağ İrtifa Şeridi -->
+        <div class="gosterge sag">
+            <span>ALT (FT)</span>
+            <strong id="irtifaDegeri">2500</strong>
+            <small id="vsiDegeri">VS 0</small>
+        </div>
+
+        <!-- Alt Kontrol ve Telemetri Paneli -->
+        <div class="alt-panel">
+            <span>THR: <b id="gazDegeri">%65</b></span>
+            <span>PITCH: <b id="yunuslamaDegeri">0°</b></span>
+            <span>ROLL: <b id="yatisDegeri">0°</b></span>
+            <span>DURUM: <b id="durumDegeri">UÇUŞTA</b></span>
+            <span class="bilgi">[W/S]: Gaz | [Yön Tuşları]: Lövyeler | [R]: Pist Başı | [M]: Motor Sesi</span>
+        </div>
+    </div>
+
+    <script src="oyun.js"></script>
+</body>
+</html>
